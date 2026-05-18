@@ -1,0 +1,9 @@
+⚠ Port 3000 is in use by process 1848, using available port 3001 instead.
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          1848
+- Dir:          D:\BaiTap\testthuctap\muagisia_nguyen
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 1848 /F to stop it.
