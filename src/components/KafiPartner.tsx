@@ -300,12 +300,11 @@ const KafiPartner = ({
               className="kafi-partner-logo"
             />
             <h1 className="features-h1">
-              Trở thành Kafi Partner
+              Kafi Partner Program
             </h1>
           </div>
           <p className="kafi-partner-subtitle">
-            Cơ hội cộng tác trong lĩnh vực tài chính với mô hình linh
-            hoạt, minh bạch và nhiều dư địa tăng trưởng.
+            Trở thành Cố vấn tài chính cùng Công ty Chứng Khoán Kafi
           </p>
         </div>
 
@@ -314,16 +313,14 @@ const KafiPartner = ({
           className="kafi-partner-title-side"
         >
           <p className="description kafi-partner-description">
-            Đồng hành cùng MuagiSIA và Kafi để giới thiệu các sản phẩm
-            tài chính phù hợp tới cộng đồng nhà đầu tư, đồng thời xây
-            dựng nguồn thu nhập chủ động từ chính mạng lưới của bạn.
+            Kafi Partner - Chương trình trở thành đối tác phát triển khách hàng là chường trình hợp tác phát triển kinh doanh mang đến nguồn thu nhập không giới hạn cho tất cả các đối tác của công ty chứng khoán.
           </p>
           <button
             type="button"
             className="landing-button kafi-partner-button"
             onClick={onOpenApplicationModal}
           >
-            <span>Đăng ký cộng tác</span>
+            <span>Tham gia ngay</span>
             <span className="landing-button-icon" aria-hidden="true">
               <ArrowUpRight />
             </span>
