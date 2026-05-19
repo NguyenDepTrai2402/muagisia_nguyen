@@ -5,7 +5,6 @@ function Navbar() {
     { label: "Tổng quan", targetId: "hero" },
     { label: "Dịch vụ", targetId: "features" },
     { label: "Partner", targetId: "partner" },
-    { label: "Khoá học", targetId: "courses" },
     { label: "Tủ sách đầu tư", targetId: "books" },
     { label: "Tin tức", targetId: "news" },
     { label: "Liên hệ", targetId: "footer" },

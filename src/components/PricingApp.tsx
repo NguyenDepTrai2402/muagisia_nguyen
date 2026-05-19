@@ -44,7 +44,6 @@ const pricingCards: PricingCard[] = [
       "Tin tức & báo cáo khuyến nghị chất lượng",
       "Sự kiện, nhật ký trên biểu đồ (Real-time)",
       "Truy cập danh mục trading/đầu tư tháng (giới hạn)",
-      "Tham gia khóa học đầu tư cơ bản",
     ],
   },
   {
@@ -59,7 +58,6 @@ const pricingCards: PricingCard[] = [
       "Tin tức & báo cáo khuyến nghị chất lượng",
       "Sự kiện, nhật ký trên biểu đồ (Real-time)",
       "Truy cập danh mục trading/đầu tư (Không giới hạn)",
-      "Các khóa học đầu tư từ cơ bản đến nâng cao",
     ],
   },
 ]

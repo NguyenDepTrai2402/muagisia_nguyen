@@ -7,7 +7,6 @@ import PricingApp from "../components/PricingApp"
 import KafiPartner from "../components/KafiPartner"
 import Tablet from "../components/Tablet"
 import Table from "../components/Table"
-import Courses from "../components/Courses"
 import Books from "../components/Books"
 import News from "../components/News"
 import CTA from "../components/CTA"
@@ -132,10 +131,6 @@ function App() {
             <Table />
           </div>
 
-          <div id="courses" className="section-wrapper">
-            <Courses />
-          </div>
-
           <div id="books" className="section-wrapper">
             <Books />
           </div>
@@ -149,11 +144,10 @@ function App() {
         <Footer />
       </div>
 
-      {isPartnerModalOpen ? (
-        <PartnerApplicationModal
-          onClose={() => setIsPartnerModalOpen(false)}
-        />
-      ) : null}
+      <PartnerApplicationModal
+        isOpen={isPartnerModalOpen}
+        onClose={() => setIsPartnerModalOpen(false)}
+      />
     </div>
   )
 }
