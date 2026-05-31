@@ -4,85 +4,85 @@ import ContentCarousel from "./ContentCarousel"
 const placeholderCover: string = "/IMGPlaceholder.jpg"
 
 interface BookItem {
-  title: string
-  cover: string
-  href: string
+  name: string
+  img: string
+  link: string
 }
 
-const bookItems: BookItem[] = [
-  {
-    title: "Nhà đầu tư thông minh",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=nha%20dau%20tu%20thong%20minh",
-  },
-  {
-    title: "Giao dịch như một phù thủy chứng khoán",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=mark%20minervini",
-  },
-  {
-    title: "Phân tích chứng khoán",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=phan%20tich%20chung%20khoan",
-  },
-  {
-    title: "Làm giàu từ chứng khoán",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=lam%20giau%20tu%20chung%20khoan",
-  },
-  {
-    title: "Tâm lý học trong đầu tư",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=tam%20ly%20hoc%20trong%20dau%20tu",
-  },
-  {
-    title: "Chu kỳ thị trường",
-    cover: placeholderCover,
-    href: "https://shopee.vn/search?keyword=chu%20ky%20thi%20truong",
-  },
-]
+const bookItems= [
+        {
+            img: "/images/book01.webp",
+            name: "Sách Phương Pháp Quản Trị Vốn Trong Đầu Tư Chứng Khoán (Money Management System)",
+            link: "https://s.shopee.vn/9UxmDTrRRC"
+        },
+        {
+            img: "/images/book02.webp",
+            name: "Bộ sách Làm Giàu Từ Chứng Khoán (Phiên bản mới) + Hướng Dẫn Thực Hành CANSLIM Cho Người Mới Bắt Đầu",
+            link: "https://s.shopee.vn/4LFg3dsEUe"
+        },
+        {
+            img: "/images/book03.webp",
+            name: "Sách Cách Kiếm Lợi Nhuận 18.000% Từ Thị Trường Chứng Khoán - Trade Like An O'Neil Disciple",
+            link: "https://s.shopee.vn/3VgZ498l76"
+        },
+        {
+            img: "/images/book04.webp",
+            name: "Sách Hướng Dẫn Giao Dịch Theo Sóng Elliott - Visual Guide To Elliott Wave Trading",
+            link: "https://s.shopee.vn/40cpf7NaPA"
+        },
+        {
+            img: "/images/book05.webp",
+            name: "Sách Phù thuỷ giao dịch chứng khoán - Mark Minervini - Phiên bản mới",
+            link: "https://s.shopee.vn/7KtHdHEYbr"
+        },
+        {
+            img: "/images/book06.webp",
+            name: "Sách Fibonacci Trading - Cách thức làm chủ lợi thế về thời gian và giá trong giao dịch ",
+            link: "https://s.shopee.vn/9UxmDEpBNk"
+        },
+    ];
 
 function Books(): React.ReactElement {
   return (
-    <ContentCarousel
-      ariaLabel="Investment books carousel"
-      description="Tập trung vào dòng sách đầu tư tài chính, MuagiSIA mang đến cho bạn đọc những cuốn sách hay nhất, giá trị nhất."
-      getItemKey={(item: BookItem) => item.title}
-      getItemTooltipText={(item: BookItem) => item.title}
-      items={bookItems}
-      renderItem={(item: BookItem) => (
-        <a
-          href={item.href}
-          target="_blank"
-          rel="noreferrer"
-          className="content-carousel-card book-card"
-        >
-          <div className="book-card-media">
-            <div className="book-card-model">
-              <div className="book-card-pages" />
-              <div className="book-card-back" />
-              <img
-                src={item.cover}
-                alt={`Bìa sách ${item.title}`}
-                className="book-card-cover"
-              />
-            </div>
-          </div>
+<ContentCarousel
+  ariaLabel="Investment books carousel"
+  description="Tập trung vào dòng sách đầu tư tài chính, MuagiSIA mang đến cho bạn đọc những cuốn sách hay nhất, giá trị nhất."
+  getItemKey={(item: BookItem) => item.link}
+  getItemTooltipText={(item: BookItem) => item.name}
+  items={bookItems}
+  renderItem={(item: BookItem) => (
+    <a
+      href={item.link}
+      target="_blank"
+      rel="noreferrer"
+      className="content-carousel-card book-card"
+    >
+      <div className="book-card-media">
+        <div className="book-card-model">
+          <div className="book-card-pages" />
+          <div className="book-card-back" />
+          <img
+            src={item.img}
+            alt={`Bìa sách ${item.name}`}
+            className="book-card-cover"
+          />
+        </div>
+      </div>
 
-          <div className="book-card-body">
-            <h2 className="book-card-title">{item.title}</h2>
-            <span className="book-card-cta">
-              <span>Chi tiết tại Shopee</span>
-              <span className="landing-button-icon" aria-hidden="true">
-                <ArrowUpRight />
-              </span>
-            </span>
-          </div>
-        </a>
-      )}
-      sectionClassName="books-section"
-      title="Tủ sách đầu tư"
-    />
+      <div className="book-card-body">
+        <h2 className="book-card-title">{item.name}</h2>
+        <span className="book-card-cta">
+          <span>Chi tiết tại Shopee</span>
+          <span className="landing-button-icon" aria-hidden="true">
+            <ArrowUpRight />
+          </span>
+        </span>
+      </div>
+    </a>
+  )}
+  sectionClassName="books-section"
+  title="Tủ sách đầu tư"
+/>
   )
 }
 

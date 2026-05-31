@@ -61,31 +61,39 @@ function News(): JSX.Element {
   const [news, setNews] = useState<NewsItem[]>(fallbackNews)
 
   useEffect(() => {
-    const fetchData = async (): Promise<void> => {
-      const url = "https://api.muagisia.com/data/news?page=1&limit=30"
+  const fetchData = async (): Promise<void> => {
+    const url = "https://api.muagisia.com/data/news?page=1&limit=30"
 
-      try {
-        const response = await fetch(url)
+    try {
+      const response = await fetch(url)
 
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`)
-        }
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`)
+      }
 
-        const result = await response.json()
-        const nextNews = result?.data?.data
+      const result = await response.json()
+      const nextNews = result?.data?.data
 
-        if (Array.isArray(nextNews) && nextNews.length > 0) {
-          setNews(nextNews)
-        }
-      } catch (error) {
-        if (error instanceof Error) {
-          console.error(error.message)
-        }
+      if (Array.isArray(nextNews) && nextNews.length > 0) {
+        const mappedNews: NewsItem[] = nextNews.map((item: any) => ({
+          href: item.link,
+          image: item.image,
+          title: item.title,
+          source: item.source,
+          time: item.time,
+        }))
+
+        setNews(mappedNews)
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message)
       }
     }
+  }
 
-    fetchData()
-  }, [])
+  fetchData()
+}, [])
 
   return (
     <ContentCarousel
