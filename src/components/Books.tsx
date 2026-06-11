@@ -52,28 +52,31 @@ function Books(): React.ReactElement {
   items={bookItems}
   renderItem={(item: BookItem) => (
     <a
-  href={item.link}
-  target="_blank"
-  rel="noreferrer"
-  className="content-carousel-card book-card"
->
-  <div className="book-card-media">
-    <img
-      src={item.img}
-      alt={`Bìa sách ${item.name}`}
-      className="book-card-cover"
-    />
-  </div>
+      href={item.link}
+      target="_blank"
+      rel="noreferrer"
+      className="content-carousel-card book-card"
+    >
+      <div className="book-card-media">
+       
+          <img
+            src={item.img}
+            alt={`Bìa sách ${item.name}`}
+            className="book-card-cover"
+          />
+     
+      </div>
 
-  <div className="book-card-body">
-    <h2 className="book-card-title">{item.name}</h2>
-
-    <span className="book-card-cta">
-      <span>Chi tiết tại Shopee</span>
-      <ArrowUpRight size={18} />
-    </span>
-  </div>
-</a>
+      <div className="book-card-body">
+        <h2 className="book-card-title">{item.name}</h2>
+        <span className="book-card-cta">
+          <span>Chi tiết tại Shopee</span>
+          <span className="landing-button-icon" aria-hidden="true">
+            <ArrowUpRight />
+          </span>
+        </span>
+      </div>
+    </a>
   )}
   sectionClassName="books-section"
   title="Tủ sách đầu tư"

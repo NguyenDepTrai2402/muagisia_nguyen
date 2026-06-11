@@ -101,16 +101,18 @@ function App() {
   return (
     <div className="smooth-scroll-parent">
       <header className="site-header">
-        <a href="#top" aria-label="Back to top" onClick={handleLogoClick}>
-          <img src="/logoMuagisia.svg" alt="MuagiSIA" className="site-logo" />
-        </a>
-        <Navbar />
-        <button type="button" className="landing-button">
-          <span>Đăng nhập</span>
-          <span className="landing-button-icon" aria-hidden="true">
-            <ArrowUpRight />
-          </span>
-        </button>
+        <div className="section-wrapper">
+          <a href="#top" aria-label="Back to top" onClick={handleLogoClick}>
+            <img src="/logoMuagisia.svg" alt="MuagiSIA" className="site-logo" />
+          </a>
+          <Navbar />
+          <button type="button" className="landing-button">
+            <span>Đăng nhập</span>
+            <span className="landing-button-icon" aria-hidden="true">
+              <ArrowUpRight />
+            </span>
+          </button>
+        </div>
       </header>
 
       <div id="top" ref={scrollingContainerRef} className="smooth-scroll-container">
