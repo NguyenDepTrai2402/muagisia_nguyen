@@ -105,6 +105,7 @@ img {
   display: block;
   max-width: 100%;
   width: 32px;
+  height: auto;
   transform: translateY(-5px);
 }
 
@@ -147,7 +148,6 @@ button {
   justify-content: space-between;
   gap: 1rem;
   padding: 15px 0;
-    transform: translateX(-8px);
 
 }
 
@@ -162,9 +162,10 @@ button {
 }
 
 .site-logo {
-  height: 40px;
+  height: auto;
   width: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .landing-button {
@@ -705,7 +706,7 @@ button {
 .book-card-model {
   position: relative;
   width: min(11.75rem, 70%);
-  aspect-ratio: 10 / 14;
+  aspect-ratio: 14 / 14;
 
 }
 
@@ -758,8 +759,6 @@ button {
   object-fit: contain;
 
   display: block;
-
-  border-radius: 1rem;
   box-shadow: none;
 
   position: static;
